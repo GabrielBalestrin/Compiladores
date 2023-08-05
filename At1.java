@@ -654,17 +654,17 @@ public class At1 {
 	    } else if (estadoAtual.equals("q2")) {
 	        System.out.println("Palavra reservada: IF");
 	    } else if (estadoAtual.equals("q6")) {
-	        System.out.println("Palavra Reservada reconhecida: ELSE");
+	        System.out.println("Palavra Reservada: ELSE");
 	    } else if (estadoAtual.equals("q9")) {
-	        System.out.println("Palavra Reservada reconhecida: FOR");
+	        System.out.println("Palavra Reservada: FOR");
 	    } else if (estadoAtual.equals("q15")) {
-	        System.out.println("Palavra Reservada reconhecida: SWITCH");
+	        System.out.println("Palavra Reservada: SWITCH");
 	    } else if (estadoAtual.equals("q22")) {
-	        System.out.println("Palavra Reservada reconhecida: DO");
+	        System.out.println("Palavra Reservada: DO");
 	    } else if (estadoAtual.equals("q27")) {
-	        System.out.println("Palavra Reservada reconhecida: WHILE");
+	        System.out.println("Palavra Reservada: WHILE");
 	    } else if (estadoAtual.equals("q37")) {
-	        System.out.println("Palavra Reservada reconhecida: FOREACH");
+	        System.out.println("Palavra Reservada: FOREACH");
 	    } else if (estadoAtual.equals("q33")) {
 	        System.out.println("Palavra Reservada reconhecida: PRINT");
 	    } else if (estadoAtual.equals("q47") || estadoAtual.equals("q48") || estadoAtual.equals("q49")
@@ -676,8 +676,6 @@ public class At1 {
 	            || estadoAtual.equals("q55") || estadoAtual.equals("q56") || estadoAtual.equals("q57")
 	            || estadoAtual.equals("q58")) {
 	        System.out.println(formatarToken("Operador", lexema, linhaAtual, colunaInicial, posicaoAtual - 1));
-	    } else {
-	        System.out.println("Erro: Sequência incompleta na linha " + linhaAtual + ", coluna " + (posicaoAtual - colunaInicial + 1));
-	    }
+	    } 
 	}
 }
