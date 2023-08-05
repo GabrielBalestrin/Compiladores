@@ -1,4 +1,4 @@
-
+package Lexer;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -28,6 +28,7 @@ public class At1 {
 				q0Transicoes.put(c, "q28");
 			}
 		}
+		q0Transicoes.put(' ', "q28");
 		for (char c = 'a'; c <= 'z'; c++) {
 			q0Transicoes.put(c, "q28");
 		}
@@ -72,6 +73,7 @@ public class At1 {
 		for (char c = 'a'; c <= 'z'; c++) {
 			q1Transicoes.put(c, "q28");
 		}
+		q1Transicoes.put(' ', "q28");
 		delta.put("q1", q1Transicoes);
 		// ESTADO q2
 		Map<Character, String> q2Transicoes = new HashMap<>();
@@ -84,6 +86,7 @@ public class At1 {
 		for (char c = 'a'; c <= 'z'; c++) {
 			q2Transicoes.put(c, "q28");
 		}
+		q2Transicoes.put(' ', "q28");
 		delta.put("q2", q2Transicoes);
 		// ESTADO q3
 		Map<Character, String> q3Transicoes = new HashMap<>();
@@ -98,6 +101,7 @@ public class At1 {
 		for (char c = 'a'; c <= 'z'; c++) {
 			q3Transicoes.put(c, "q28");
 		}
+		q3Transicoes.put(' ', "q28");
 		delta.put("q3", q3Transicoes);
 		// ESTADO q4
 		Map<Character, String> q4Transicoes = new HashMap<>();
@@ -112,6 +116,7 @@ public class At1 {
 		for (char c = 'a'; c <= 'z'; c++) {
 			q4Transicoes.put(c, "q28");
 		}
+		q4Transicoes.put(' ', "q28");
 		delta.put("q4", q4Transicoes);
 		// ESTADO q5
 		Map<Character, String> q5Transicoes = new HashMap<>();
@@ -126,6 +131,7 @@ public class At1 {
 		for (char c = 'a'; c <= 'z'; c++) {
 			q5Transicoes.put(c, "q28");
 		}
+		q5Transicoes.put(' ', "q28");
 		delta.put("q5", q5Transicoes);
 		// ESTADO q6
 		Map<Character, String> q6Transicoes = new HashMap<>();
@@ -139,6 +145,7 @@ public class At1 {
 		for (char c = 'a'; c <= 'z'; c++) {
 			q6Transicoes.put(c, "q28");
 		}
+		q6Transicoes.put(' ', "q28");
 		delta.put("q6", q6Transicoes);
 		// ESTADO q7
 		Map<Character, String> q7Transicoes = new HashMap<>();
@@ -153,6 +160,7 @@ public class At1 {
 		for (char c = 'a'; c <= 'z'; c++) {
 			q7Transicoes.put(c, "q28");
 		}
+		q7Transicoes.put(' ', "q28");
 		delta.put("q7", q7Transicoes);
 		// ESTADO q8
 		Map<Character, String> q8Transicoes = new HashMap<>();
@@ -167,6 +175,7 @@ public class At1 {
 		for (char c = 'a'; c <= 'z'; c++) {
 			q8Transicoes.put(c, "q28");
 		}
+		q8Transicoes.put(' ', "q28");
 		delta.put("q8", q8Transicoes);
 		// ESTADO q9
 		Map<Character, String> q9Transicoes = new HashMap<>();
@@ -181,6 +190,7 @@ public class At1 {
 		for (char c = 'a'; c <= 'z'; c++) {
 			q9Transicoes.put(c, "q28");
 		}
+		q9Transicoes.put(' ', "q28");
 		delta.put("q9", q9Transicoes);
 		// ESTADO q10
 		Map<Character, String> q10Transicoes = new HashMap<>();
@@ -196,6 +206,7 @@ public class At1 {
 
 			q10Transicoes.put(c, "q28");
 		}
+		q10Transicoes.put(' ', "q28");
 		delta.put("q10", q10Transicoes);
 		// ESTADO q11
 		Map<Character, String> q11Transicoes = new HashMap<>();
@@ -210,6 +221,7 @@ public class At1 {
 		for (char c = 'a'; c <= 'z'; c++) {
 			q11Transicoes.put(c, "q28");
 		}
+		q11Transicoes.put(' ', "q28");
 		delta.put("q11", q11Transicoes);
 		// ESTADO q12
 		Map<Character, String> q12Transicoes = new HashMap<>();
@@ -224,6 +236,7 @@ public class At1 {
 		for (char c = 'a'; c <= 'z'; c++) {
 			q12Transicoes.put(c, "q28");
 		}
+		q12Transicoes.put(' ', "q28");
 		delta.put("q12", q12Transicoes);
 		// ESTADO q13
 		Map<Character, String> q13Transicoes = new HashMap<>();
@@ -238,6 +251,7 @@ public class At1 {
 		for (char c = 'a'; c <= 'z'; c++) {
 			q13Transicoes.put(c, "q28");
 		}
+		q13Transicoes.put(' ', "q28");
 		delta.put("q13", q13Transicoes);
 		// ESTADO q14
 		Map<Character, String> q14Transicoes = new HashMap<>();
@@ -252,6 +266,7 @@ public class At1 {
 		for (char c = 'a'; c <= 'z'; c++) {
 			q14Transicoes.put(c, "q28");
 		}
+		q14Transicoes.put(' ', "q28");
 		delta.put("q14", q14Transicoes);
 		// ESTADO q15
 		Map<Character, String> q15Transicoes = new HashMap<>();
@@ -264,6 +279,7 @@ public class At1 {
 		for (char c = 'a'; c <= 'z'; c++) {
 			q15Transicoes.put(c, "q28");
 		}
+		q15Transicoes.put(' ', "q28");
 		delta.put("q15", q15Transicoes);
 		// ESTADO q16
 		Map<Character, String> q16Transicoes = new HashMap<>();
@@ -278,6 +294,7 @@ public class At1 {
 		for (char c = 'a'; c <= 'z'; c++) {
 			q16Transicoes.put(c, "q28");
 		}
+		q16Transicoes.put(' ', "q28");
 		delta.put("q16", q16Transicoes);
 		// ESTADO q17
 		Map<Character, String> q17Transicoes = new HashMap<>();
@@ -292,6 +309,7 @@ public class At1 {
 		for (char c = 'a'; c <= 'z'; c++) {
 			q17Transicoes.put(c, "q28");
 		}
+		q17Transicoes.put(' ', "q28");
 		delta.put("q17", q17Transicoes);
 		// ESTADO q18
 		Map<Character, String> q18Transicoes = new HashMap<>();
@@ -306,6 +324,7 @@ public class At1 {
 		for (char c = 'a'; c <= 'z'; c++) {
 			q18Transicoes.put(c, "q28");
 		}
+		q18Transicoes.put(' ', "q28");
 		delta.put("q18", q18Transicoes);
 		// ESTADO q19
 		Map<Character, String> q19Transicoes = new HashMap<>();
@@ -318,6 +337,7 @@ public class At1 {
 		for (char c = 'a'; c <= 'z'; c++) {
 			q19Transicoes.put(c, "q28");
 		}
+		q19Transicoes.put(' ', "q28");
 		delta.put("q19", q19Transicoes);
 		// ESTADO q20
 		Map<Character, String> q20Transicoes = new HashMap<>();
@@ -338,6 +358,7 @@ public class At1 {
 		for (char c = 'a'; c <= 'z'; c++) {
 			q21Transicoes.put(c, "q28");
 		}
+		q21Transicoes.put(' ', "q28");
 		delta.put("q21", q21Transicoes);
 		// ESTADO q22
 		Map<Character, String> q22Transicoes = new HashMap<>();
@@ -350,6 +371,7 @@ public class At1 {
 		for (char c = 'a'; c <= 'z'; c++) {
 			q22Transicoes.put(c, "q22");
 		}
+		q22Transicoes.put(' ', "q28");
 		delta.put("q22", q22Transicoes);
 		// ESTADO q23
 		Map<Character, String> q23Transicoes = new HashMap<>();
@@ -364,6 +386,7 @@ public class At1 {
 		for (char c = 'a'; c <= 'z'; c++) {
 			q23Transicoes.put(c, "q28");
 		}
+		q23Transicoes.put(' ', "q28");
 		delta.put("q23", q23Transicoes);
 		// ESTADO q24
 		Map<Character, String> q24Transicoes = new HashMap<>();
@@ -378,6 +401,7 @@ public class At1 {
 		for (char c = 'a'; c <= 'z'; c++) {
 			q24Transicoes.put(c, "q28");
 		}
+		q24Transicoes.put(' ', "q28");
 		delta.put("q24", q24Transicoes);
 		// ESTADO q25
 		Map<Character, String> q25Transicoes = new HashMap<>();
@@ -393,6 +417,7 @@ public class At1 {
 		for (char c = 'a'; c <= 'z'; c++) {
 			q25Transicoes.put(c, "q28");
 		}
+		q25Transicoes.put(' ', "q28");
 		delta.put("q25", q25Transicoes);
 		// ESTADO q26
 		Map<Character, String> q26Transicoes = new HashMap<>();
@@ -407,6 +432,7 @@ public class At1 {
 		for (char c = 'a'; c <= 'z'; c++) {
 			q26Transicoes.put(c, "q28");
 		}
+		q26Transicoes.put(' ', "q28");
 		delta.put("q26", q26Transicoes);
 		// ESTADO q27
 		Map<Character, String> q27Transicoes = new HashMap<>();
@@ -419,18 +445,20 @@ public class At1 {
 		for (char c = 'a'; c <= 'z'; c++) {
 			q27Transicoes.put(c, "q28");
 		}
+		q27Transicoes.put(' ', "q28");
 		delta.put("q27", q27Transicoes);
 		// ESTADO q28
 		Map<Character, String> q28Transicoes = new HashMap<>();
 		for (char c = '0'; c <= '9'; c++) {
-			q27Transicoes.put(c, "q28");
+			q28Transicoes.put(c, "q28");
 		}
 		for (char c = 'A'; c <= 'Z'; c++) {
-			q27Transicoes.put(c, "q28");
+			q28Transicoes.put(c, "q28");
 		}
 		for (char c = 'a'; c <= 'z'; c++) {
-			q27Transicoes.put(c, "q28");
+			q28Transicoes.put(c, "q28");
 		}
+		q28Transicoes.put(' ', "q28");
 		delta.put("q28", q28Transicoes);
 		// ESTADO q29
 		Map<Character, String> q29Transicoes = new HashMap<>();
@@ -445,6 +473,7 @@ public class At1 {
 		for (char c = 'a'; c <= 'z'; c++) {
 			q29Transicoes.put(c, "q28");
 		}
+		q29Transicoes.put(' ', "q28");
 		delta.put("q29", q29Transicoes);
 		// ESTADO q30
 		Map<Character, String> q30Transicoes = new HashMap<>();
@@ -459,6 +488,7 @@ public class At1 {
 		for (char c = 'a'; c <= 'z'; c++) {
 			q30Transicoes.put(c, "q28");
 		}
+		q30Transicoes.put(' ', "q28");
 		delta.put("q30", q30Transicoes);
 		// ESTADO q31
 		Map<Character, String> q31Transicoes = new HashMap<>();
@@ -473,6 +503,7 @@ public class At1 {
 		for (char c = 'a'; c <= 'z'; c++) {
 			q31Transicoes.put(c, "q28");
 		}
+		q31Transicoes.put(' ', "q28");
 		delta.put("q31", q31Transicoes);
 		// ESTADO q32
 		Map<Character, String> q32Transicoes = new HashMap<>();
@@ -487,6 +518,7 @@ public class At1 {
 		for (char c = 'a'; c <= 'z'; c++) {
 			q32Transicoes.put(c, "q28");
 		}
+		q32Transicoes.put(' ', "q28");
 		delta.put("q32", q32Transicoes);
 		// ESTADO q33
 		Map<Character, String> q33Transicoes = new HashMap<>();
@@ -499,6 +531,7 @@ public class At1 {
 		for (char c = 'a'; c <= 'z'; c++) {
 			q33Transicoes.put(c, "q28");
 		}
+		q33Transicoes.put(' ', "q28");
 		delta.put("q33", q33Transicoes);
 		// ESTADO q34
 		Map<Character, String> q34Transicoes = new HashMap<>();
@@ -513,6 +546,7 @@ public class At1 {
 		for (char c = 'a'; c <= 'z'; c++) {
 			q34Transicoes.put(c, "q28");
 		}
+		q34Transicoes.put(' ', "q28");
 		delta.put("q34", q34Transicoes);
 		// ESTADO q35
 		Map<Character, String> q35Transicoes = new HashMap<>();
@@ -530,6 +564,7 @@ public class At1 {
 		for (char c = 'a'; c <= 'z'; c++) {
 			q35Transicoes.put(c, "q28");
 		}
+		q35Transicoes.put(' ', "q28");
 		delta.put("q35", q35Transicoes);
 		// ESTADO q36
 		Map<Character, String> q36Transicoes = new HashMap<>();
@@ -546,6 +581,7 @@ public class At1 {
 		for (char c = 'a'; c <= 'z'; c++) {
 			q36Transicoes.put(c, "q28");
 		}
+		q36Transicoes.put(' ', "q28");
 		delta.put("q36", q36Transicoes);
 		// ESTADO q37
 		Map<Character, String> q37Transicoes = new HashMap<>();
@@ -558,6 +594,7 @@ public class At1 {
 		for (char c = 'a'; c <= 'z'; c++) {
 			q37Transicoes.put(c, "q28");
 		}
+		q37Transicoes.put(' ', "q28");
 		delta.put("q37", q37Transicoes);
 		// ESTADO q38
 		Map<Character, String> q38Transicoes = new HashMap<>();
@@ -581,73 +618,66 @@ public class At1 {
 		q53Transicoes.put('=', "q54");
 		delta.put("q53", q53Transicoes);
 	}
-	
+
 	public static String formatarToken(String tipo, String lexema, int linha, int colunaInicial, int colunaFinal) {
-        return String.format("<%s, %s, Linha %d, Coluna %d, Coluna %d>", tipo, lexema, linha, colunaInicial, colunaFinal);
-    }
-
+	    return String.format("<%s, %s, Linha %d, Coluna %d, Coluna %d>", tipo, lexema, linha, colunaInicial, colunaFinal);
+	}
 	public static void main(String[] args) {
-		Scanner ler = new Scanner(System.in);
-		System.out.print("Digite uma cadeia: ");
-		String entrada = ler.nextLine();
-		ler.close();
-		
-		String estadoAtual = "q0";
-		int posicaoAtual = 0;
-		int linhaAtual = 1;
-		int colunaInicial = 0;
-		String lexema = "";
-
-		while (posicaoAtual < entrada.length()) {
-		    char caracterAtual = entrada.charAt(posicaoAtual);
-
-		    if (caracterAtual == '\n') { // Check for newline character
-		        linhaAtual++;
-		        colunaInicial = posicaoAtual + 1; // Update starting column for the next line
-		    }
-
-		    if (!delta.containsKey(estadoAtual) || !delta.get(estadoAtual).containsKey(caracterAtual)) {
-		        System.out.println("Erro: Sequência inválida na linha " + linhaAtual + ", coluna " + (posicaoAtual - colunaInicial + 1));
-		        break;
-		    } else {
-		        estadoAtual = delta.get(estadoAtual).get(caracterAtual);
-		        lexema += caracterAtual;
-		        posicaoAtual++;
-		    }
-		}
-		
-		if (estadoAtual.equals("q28")) {
-		    System.out.println(formatarToken("Identificador", lexema, linhaAtual, colunaInicial, posicaoAtual - 1));
-		} else if (estadoAtual.equals("q20")) {
-		    System.out.println(formatarToken("Constante", lexema, linhaAtual, colunaInicial, posicaoAtual - 1));
-		} else if (estadoAtual.equals("q2")) {
-			System.out.println("Palavra reservada: IF");
-		} else if (estadoAtual.equals("q6")) {
-		    System.out.println("Palavra Reservada reconhecida: ELSE");
-		} else if (estadoAtual.equals("q9")) {
-		    System.out.println("Palavra Reservada reconhecida: FOR");
-		} else if (estadoAtual.equals("q15")) {
-		    System.out.println("Palavra Reservada reconhecida: SWITCH");
-		} else if (estadoAtual.equals("q22")) {
-		    System.out.println("Palavra Reservada reconhecida: DO");
-		} else if (estadoAtual.equals("q27")) {
-		    System.out.println("Palavra Reservada reconhecida: WHILE");
-		} else if (estadoAtual.equals("q37")) {
-		    System.out.println("Palavra Reservada reconhecida: FOREACH");
-		} else if (estadoAtual.equals("q33")) {
-		    System.out.println("Palavra Reservada reconhecida: PRINT");
-		} else if (estadoAtual.equals("q47") || estadoAtual.equals("q48") || estadoAtual.equals("q49")
-		        || estadoAtual.equals("q50") || estadoAtual.equals("q51") || estadoAtual.equals("q52")) {
-		    System.out.println(formatarToken("Separador", lexema, linhaAtual, colunaInicial, posicaoAtual - 1));
-		} else if (estadoAtual.equals("q33") || estadoAtual.equals("q38") || estadoAtual.equals("q40") ||
-		        estadoAtual.equals("q41") || estadoAtual.equals("q42") || estadoAtual.equals("q43") ||
-		        estadoAtual.equals("q44") || estadoAtual.equals("q45") || estadoAtual.equals("q54") ||
-		        estadoAtual.equals("q55") || estadoAtual.equals("q56") || estadoAtual.equals("q57") ||
-		        estadoAtual.equals("q58")) {
-		    System.out.println(formatarToken("Operador", lexema, linhaAtual, colunaInicial, posicaoAtual - 1));
-		} else {
-		    System.out.println("Erro: Sequência incompleta na linha " + linhaAtual + ", coluna " + (posicaoAtual - colunaInicial + 1));
-		}
+	    Scanner ler = new Scanner(System.in);
+	    System.out.print("Digite uma cadeia: ");
+	    String entrada = ler.nextLine();
+	    ler.close();
+	    String estadoAtual = "q0";
+	    int posicaoAtual = 0;
+	    int linhaAtual = 1;
+	    int colunaInicial = 0;
+	    String lexema = "";
+	    while (posicaoAtual < entrada.length()) {
+	        char caracterAtual = entrada.charAt(posicaoAtual);
+	        if (caracterAtual == '\n') {
+	            linhaAtual++;
+	            colunaInicial = posicaoAtual + 1;
+	        }
+	        if (!delta.containsKey(estadoAtual) || !delta.get(estadoAtual).containsKey(caracterAtual)) {
+	            System.out.println("Erro: SequÃªncia invÃ¡lida na linha " + linhaAtual + ", coluna " + (posicaoAtual - colunaInicial + 1));
+	            break;
+	        } else {
+	            estadoAtual = delta.get(estadoAtual).get(caracterAtual);
+	            lexema += caracterAtual;
+	        }
+	        posicaoAtual++;
+	    }
+	    if (estadoAtual.equals("q28")) {
+	        System.out.println(formatarToken("Identificador", lexema, linhaAtual, colunaInicial, posicaoAtual - 1));
+	    } else if (estadoAtual.equals("q20")) {
+	        System.out.println(formatarToken("Constante", lexema, linhaAtual, colunaInicial, posicaoAtual - 1));
+	    } else if (estadoAtual.equals("q2")) {
+	        System.out.println("Palavra reservada: IF");
+	    } else if (estadoAtual.equals("q6")) {
+	        System.out.println("Palavra Reservada reconhecida: ELSE");
+	    } else if (estadoAtual.equals("q9")) {
+	        System.out.println("Palavra Reservada reconhecida: FOR");
+	    } else if (estadoAtual.equals("q15")) {
+	        System.out.println("Palavra Reservada reconhecida: SWITCH");
+	    } else if (estadoAtual.equals("q22")) {
+	        System.out.println("Palavra Reservada reconhecida: DO");
+	    } else if (estadoAtual.equals("q27")) {
+	        System.out.println("Palavra Reservada reconhecida: WHILE");
+	    } else if (estadoAtual.equals("q37")) {
+	        System.out.println("Palavra Reservada reconhecida: FOREACH");
+	    } else if (estadoAtual.equals("q33")) {
+	        System.out.println("Palavra Reservada reconhecida: PRINT");
+	    } else if (estadoAtual.equals("q47") || estadoAtual.equals("q48") || estadoAtual.equals("q49")
+	            || estadoAtual.equals("q50") || estadoAtual.equals("q51") || estadoAtual.equals("q52")) {
+	        System.out.println(formatarToken("Separador", lexema, linhaAtual, colunaInicial, posicaoAtual - 1));
+	    } else if (estadoAtual.equals("q33") || estadoAtual.equals("q38") || estadoAtual.equals("q40")
+	            || estadoAtual.equals("q41") || estadoAtual.equals("q42") || estadoAtual.equals("q43")
+	            || estadoAtual.equals("q44") || estadoAtual.equals("q45") || estadoAtual.equals("q54")
+	            || estadoAtual.equals("q55") || estadoAtual.equals("q56") || estadoAtual.equals("q57")
+	            || estadoAtual.equals("q58")) {
+	        System.out.println(formatarToken("Operador", lexema, linhaAtual, colunaInicial, posicaoAtual - 1));
+	    } else {
+	        System.out.println("Erro: SequÃªncia incompleta na linha " + linhaAtual + ", coluna " + (posicaoAtual - colunaInicial + 1));
+	    }
 	}
 }
-
