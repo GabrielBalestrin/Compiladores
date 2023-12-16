@@ -1,0 +1,56 @@
+%%
+
+/* Seção de Definições de Usuário */
+%class MeuLexer
+%unicode
+%cup
+
+/* Expressões Regulares */
+letras = [a-zA-Z]
+num = [0-9]
+es = [ \n\r\t]
+id = {letras}({letras}|{num})*
+
+%%
+
+/* Regras Léxicas */
+"if" { return symbol(sym.IF); }
+"switch" { return symbol(sym.SWITCH); }
+"case" { return symbol(sym.CASE); }
+"default" { return symbol(sym.DEFAULT); }
+"while" { return symbol(sym.WHILE); }
+"break" { return symbol(sym.BREAK); }
+"for" { return symbol(sym.FOR); }
+"foreach" { return symbol(sym.FOREACH); }
+"print" { return symbol(sym.PRINT); }
+"else" { return symbol(sym.ELSE); }
+"do" { return symbol(sym.DO); }
+"int" { return symbol(sym.INT); }
+"String" { return symbol(sym.STRING); }
+"char" { return symbol(sym.CHAR); }
+"programa" { return symbol(sym.PROGRAMA); }
+{id} { return symbol(sym.ID, yytext()); }
+{es} { /* Ignore espaços em branco. */ }
+{num}+ { return symbol(sym.CONST, yytext()); }
+"=" { return symbol(sym.IGUAL); }
+"+" { return symbol(sym.SOMA); }
+"/" { return symbol(sym.DIV); }
+"*" { return symbol(sym.MULT); }
+"-" { return symbol(sym.SUBT); }
+"--" { return symbol(sym.MENOSMENOS); }
+"++" { return symbol(sym.MAISMAIS); }
+">" { return symbol(sym.MAIORQ); }
+"<" { return symbol(sym.MENORQ); }
+"<=" { return symbol(sym.MENORIGUAL); }
+">=" { return symbol(sym.MAIORIQUAL); }
+"==" { return symbol(sym.IGUALIGUAL); }
+"{" { return symbol(sym.ACHAVES); }
+"}" { return symbol(sym.FCHAVES); }
+"[" { return symbol(sym.ACOL); }
+"]" { return symbol(sym.FCOL); }
+"(" { return symbol(sym.AP); }
+")" { return symbol(sym.FP); }
+"," { return symbol(sym.V); }
+";" { return symbol(sym.PV); }
+":" { return symbol(sym.PP); }
+"'" { return symbol(sym.ASPAS); }

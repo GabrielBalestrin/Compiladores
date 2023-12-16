@@ -1,0 +1,116 @@
+import java_cup.runtime.*;
+
+/* Definições de terminais e não-terminais */
+terminal IF, SWITCH, CASE, DEFAULT, WHILE, BREAK, FOR, FOREACH, PRINT, ELSE, DO, INT, STRING, CHAR, PROGRAMA, ID, IGUAL, SOMA, DIV, MULT, SUBT, MENOSMENOS, MAISMAIS, MAIORQ, MENORQ, MENORIGUAL, MAIORIQUAL, IGUALIGUAL, ACHAVES, FCHAVES, ACOL, FCOL, AP, FP, V, PV, PP, ASPAS, CONST, ESPACO;
+non terminal Prog, ListaVarParametros, MaisParametros, Parametro, ListaComandos, Comando, EstruturaControle, IfElse, ListaCases, Bloco, Condicao, Expressao, Tipo, Operacao, Comparador, Print, PrintConteudo, StringChars, StringChar, DeclaracaoVariavel, InicializacaoVariavel, For, ForInicializacao, ForIteracao, DeclaracaoVariavelFor, AtribuicaoFor, While, Incremento;
+
+/* Regras de Produção */
+Prog ::= PROGRAMA ID AP ListaVarParametros FP ACHAVES ListaComandos FCHAVES;
+
+ListaVarParametros ::= Parametro MaisParametros
+                     |
+                     ;
+
+MaisParametros ::= V Parametro MaisParametros
+                 |
+                 ;
+
+Parametro ::= Tipo ID;
+
+Tipo ::= INT
+        | STRING
+        | CHAR
+        ;
+ListaComandos ::= Comando ListaComandos
+                |
+                ;
+
+Comando ::= EstruturaControle
+          | DeclaracaoVariavel
+          | Atribuicao
+          | Print
+          | For
+          | While
+          | Incremento
+          ;
+
+EstruturaControle ::= IF AP Condicao FP Bloco IfElse
+                    | SWITCH AP ID FP ACHAVES ListaCases FCHAVES
+                    | FOREACH AP Tipo ID PP ID FP Bloco
+                    ;
+
+IfElse ::= ELSE Bloco
+         | ELSE EstruturaControle
+         |
+         ;
+
+ListaCases ::= CASE CONST PP ListaComandos BREAK PV ListaCases
+             | DEFAULT PP ListaComandos
+             |
+             ;
+
+Bloco ::= ACHAVES ListaComandos FCHAVES;
+
+Condicao ::= Expressao Comparador Expressao;
+
+Expressao ::= ID
+            | CONST
+            ;
+
+DeclaracaoVariavel ::= Tipo ID InicializacaoVariavel PV;
+
+InicializacaoVariavel ::= IGUAL Expressao
+                        |
+                        ;
+
+Atribuicao ::= ID IGUAL Expressao PV;
+
+Operacao ::= MAISMAIS
+           | MENOSMENOS
+           ;
+
+Comparador ::= MAIORQ
+             | MENORQ
+             | MENORIGUAL
+             | MAIORIQUAL
+             | IGUALIGUAL
+             ;
+
+Print ::= PRINT AP PrintConteudo FP PV;
+
+PrintConteudo ::= ASPAS StringChars ASPAS
+                | CONST
+                | ID
+                |
+                ;
+
+StringChars ::= StringChar StringChars
+              |
+              ;
+
+StringChar ::= ID
+             | CONST
+             | ESPACO
+             ;
+
+For ::= FOR AP INT ForInicializacao PV Condicao PV ForIteracao FP Bloco;
+
+ForInicializacao ::= DeclaracaoVariavelFor
+                   | AtribuicaoFor
+                   |
+                   ;
+
+DeclaracaoVariavelFor ::= Tipo ID InicializacaoVariavel;
+
+AtribuicaoFor ::= ID IGUAL Expressao;
+
+ForIteracao ::= ID Operacao
+              | Operacao ID
+              |
+              ;
+
+While ::= WHILE AP Condicao FP Bloco;
+
+Incremento ::= ID MAISMAIS PV
+             | ID MENOSMENOS PV
+             ;

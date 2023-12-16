@@ -1,0 +1,137 @@
+// DEFINIÇÕES REGULARES
+
+letras:[a-zA-Z]
+num:[0-9]
+es:[\ \n\r\t]
+
+// TOKENS 
+
+ if:"if"
+switch:"switch"
+case:"case"
+default:"default"
+while:"while"
+break:"break"
+for:"for"
+foreach:"foreach"
+print:"print"
+else:"else"
+do:"do"
+int:"int"
+string:"String"
+char:"char"
+programa:"programa"
+id: {letras}({letras}|{num})*
+:{es}
+const:{num}+
+igual:"="
+soma:"+"
+div:"/"
+mult:"*"
+subt:"-"
+menosmenos:"--"
+maismais:"++"
+maiorq:">"
+menorq:"<"
+menorigual:"<="
+maioriqual:">="
+igualigual:"=="
+achaves:"{"
+fchaves:"}"
+acol:"["
+fcol:"]"
+ap:"("
+fp:")"
+v:","
+pv:";"
+pp:":"
+aspas:"'"
+espaco ::= ' ' | '\t' 
+
+// NÃO TERMINAIS
+
+ <prog>
+<lista_var_parametros>
+<parametro>
+<lista_comandos>
+<comando>
+<estrutura_controle>
+<if_else>
+<lista_cases>
+<bloco>
+<condicao>
+<expressao>
+<tipo>
+<operacao>
+<comparador>
+<argumento_print>
+<atribuicao>
+<print>
+<print_conteudo> 
+<string_seq>
+<string_elem>
+<string_chars>
+<string_char>
+<declaracao_variavel>
+<inicializacao_variavel>
+<for>
+<for_inicializacao>
+<for_iteracao>
+<declaracao_variavel_for>
+<atribuicao_for>
+<while>
+<incremento>
+<mais_parametros>
+
+// GRAMÁTICA
+
+ <prog> ::= programa id ap <lista_var_parametros> fp achaves <lista_comandos> fchaves;
+
+<lista_var_parametros> ::= <parametro> <mais_parametros> | î;
+<mais_parametros> ::= v <parametro> <mais_parametros> | î;
+<parametro> ::= <tipo> id;
+
+
+<lista_comandos> ::= <comando> <lista_comandos> | î;
+<comando> ::= <estrutura_controle> | <declaracao_variavel> | <atribuicao> | <print> | <for> | <while> | <incremento> ;
+<estrutura_controle> ::= if ap <condicao> fp <bloco> <if_else>
+                       | switch ap id fp achaves <lista_cases> fchaves
+                       | foreach ap <tipo> id pp id fp <bloco>;
+		
+
+<if_else> ::= else <bloco> | else <estrutura_controle> | î;
+
+<lista_cases> ::= case const pp <lista_comandos> break pv <lista_cases> | default pp <lista_comandos> | î;
+
+<bloco> ::= achaves <lista_comandos> fchaves;
+
+<condicao> ::= <expressao> <comparador> <expressao>;
+
+<expressao> ::= id | const;
+
+<declaracao_variavel> ::= <tipo> id <inicializacao_variavel> pv;
+
+<inicializacao_variavel> ::= igual <expressao> | î;
+
+<atribuicao> ::= id igual <expressao> pv ;
+
+<tipo> ::= int | string | char;
+
+<operacao> ::= maismais | menosmenos;
+
+<comparador> ::= maiorq | menorq | menorigual | maioriqual | igualigual;
+
+<print> ::= print ap <print_conteudo> fp pv;
+<print_conteudo> ::= aspas <string_chars> aspas | const | id | î;
+<string_chars> ::= <string_char> <string_chars> | î;
+<string_char> ::= id | const | espaco;
+
+	
+<for> ::= for ap int <for_inicializacao> pv <condicao> pv <for_iteracao> fp <bloco>;
+<for_inicializacao> ::= <declaracao_variavel_for> | <atribuicao_for> | î;
+<declaracao_variavel_for> ::= <tipo> id <inicializacao_variavel>;
+<atribuicao_for> ::= id igual <expressao>;
+<for_iteracao> ::= id <operacao> | <operacao> id | î;
+
+<while> ::= while ap <condicao> fp <bloco> ;
+<incremento> ::= id maismais pv | id menosmenos pv;
